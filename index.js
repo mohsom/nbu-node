@@ -17,9 +17,9 @@ request(
             function findTable(tables) {
                 var length = tables.length;
                 for (var i = 0; i < length; i++) {
-                    var curr = cheerio.load(tables[i]);
-                    console.log(curr('td')[0].hasClass('col_title_c'));
-
+                    if ($('td',$('tr', tables[i])).hasClass('col_title_c')) {
+                        return tables[i];
+                    }
                 }
             }
 
