@@ -24,6 +24,9 @@ request(
             }
 
             var rates_table = findTable(tables);
-            console.log(rates_table);
+
+            function parseTable(table) {
+
+            }
         }
     });
